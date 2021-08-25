@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TITLE</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <!-- Helps with crawlers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Helps with responsiveness -->
+    <meta
+      name="description"
+      content="This is the description of the website..."
+    />
+    <!-- Description of the website -->
+    <link rel="icon" href="/html5.ico" />
+    <!-- Favicon -->
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <button>klik og kig i console!</button>
+    <script>
+      let tid;
+
+      function hvadTid() {
+        let tid = new Date().getHours();
+      }
+
+      if (tid < 10) {
+        console.log("Godmorgen");
+      } else if (tid < 18) {
+        console.log("Goddag");
+      } else if (tid < 24) {
+        console.log("Godaften");
+      } else {
+        console.log("Godnat");
+      }
+
+      hvadTid();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TITLE</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <!-- Helps with crawlers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Helps with responsiveness -->
+    <meta
+      name="description"
+      content="This is the description of the website..."
+    />
+    <!-- Description of the website -->
+    <link rel="icon" href="/html5.ico" />
+    <!-- Favicon -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header><h1>Titel</h1></header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article>
+          <img src="https://placeimg.com/640/480/animals" alt="" />
+          <h3>Article 1</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            expedita labore sint neque iusto dolorum excepturi, deleniti culpa
+            sapiente? Vitae at fuga repellat itaque autem provident, quisquam
+            qui asperiores veritatis.
+          </p>
+        </article>
+        <article>
+          <img src="https://placeimg.com/640/480/animals" alt="" />
+          <h3>Article 2</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
+            distinctio qui et velit aut quos aspernatur ut assumenda, id sint
+            illum laboriosam! Voluptas nulla sequi rem rerum? Explicabo, nisi
+            doloremque?
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer><h2>This is the footer</h2></footer>
+  </body>
+  <script>
+    const h1 = document.querySelector("h1");
+    console.log(h1);
+    const h2 = document.querySelector("main > h2");
+    console.log(h2);
+    const img1 = document.querySelector("img");
+    console.log(img1);
+    const h3 = document.querySelector("h3");
+    console.log(h3);
+    const p1 = document.querySelector("p");
+    console.log(p1);
+    const img2 = document.querySelector("article:nth-child(2) > img");
+    console.log(img2);
+    const h3_2 = document.querySelector("article:nth-child(2) > h3");
+    console.log(h3_2);
+    const p2 = document.querySelector("article:nth-child(2) > p");
+    console.log(p2);
+    const h2_footer = document.querySelector("footer > h2");
+    console.log(h2_footer);
+  </script>
+</html>

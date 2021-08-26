@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TITLE</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <!-- Helps with crawlers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Helps with responsiveness -->
+    <meta
+      name="description"
+      content="This is the description of the website..."
+    />
+    <!-- Description of the website -->
+    <link rel="icon" href="/html5.ico" />
+    <!-- Favicon -->
+  </head>
+  <body>
+    <p>Gæt et tal mellem 0 - 20</p>
+    <input type="text" id="brugerTal" />
+    <button id="btn">Gæt tallet</button>
+    <script>
+      let tal;
+      let antalKlik = 0;
+
+      btn.onclick = function () {
+        antalKlik++;
+      };
+
+      document.querySelector("button").addEventListener("click", genererTal);
+      function genererTal() {
+        let tal = Math.round(Math.random() * 20);
+        let brugerTal = document.querySelector("#brugerTal").value;
+        if (brugerTal < tal) {
+          console.log("Dit gæt er for lavt.");
+        } else if (brugerTal > tal) {
+          console.log("Dit gæt er for højt.");
+        } else {
+          console.log(
+            `Tillykke! Dit gæt er rigtigt! Du gættede ${antalKlik} gange. Vil du prøve igen med et nyt tal?`
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

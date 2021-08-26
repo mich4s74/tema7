@@ -20,7 +20,7 @@
     <input type="text" id="brugerTal" />
     <button id="btn">Gæt tallet</button>
     <script>
-      let tal;
+      let tal = Math.round(Math.random() * 20);
       let antalKlik = 0;
 
       btn.onclick = function () {
@@ -29,7 +29,6 @@
 
       document.querySelector("button").addEventListener("click", genererTal);
       function genererTal() {
-        let tal = Math.round(Math.random() * 20);
         let brugerTal = document.querySelector("#brugerTal").value;
         if (brugerTal < tal) {
           console.log("Dit gæt er for lavt.");

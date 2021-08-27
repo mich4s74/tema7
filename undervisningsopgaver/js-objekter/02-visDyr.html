@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TITLE</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <!-- Helps with crawlers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Helps with responsiveness -->
+    <meta
+      name="description"
+      content="This is the description of the website..."
+    />
+    <!-- Description of the website -->
+    <link rel="icon" href="/html5.ico" />
+    <!-- Favicon -->
+  </head>
+  <body>
+    <article id="gris">
+      <img src="//" alt="" />
+    </article>
+  </body>
+  <script>
+    let dyr = {
+      navn: "gris",
+      type: "pattedyr",
+      billede: "http://mabe-kea.dk/E19/pics/pig.png",
+      levested: "svinefarme",
+    };
+
+    document.addEventListener("DOMContentLoaded", (event) => {
+      console.log("Dom content is fully loaded");
+      const article = document.querySelector("article");
+      const fuldInfo = `Dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`;
+
+      article.textContent = fuldInfo;
+      article.querySelector("img").src = dyr.billede;
+    });
+  </script>
+</html>

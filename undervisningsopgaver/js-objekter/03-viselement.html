@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TITLE</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <!-- Helps with crawlers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Helps with responsiveness -->
+    <meta
+      name="description"
+      content="This is the description of the website..."
+    />
+    <!-- Description of the website -->
+    <link rel="icon" href="/html5.ico" />
+    <!-- Favicon -->
+  </head>
+  <body>
+    <article id="dyr">
+      <h3></h3>
+      <img src="//" alt="" />
+      <p>Type:</p>
+      <p>Levested:</p>
+    </article>
+  </body>
+  <script>
+    let dyr = {
+      navn: "gris",
+      type: "pattedyr",
+      billede: "http://mabe-kea.dk/E19/pics/pig.png",
+      levested: "svinefarme",
+    };
+
+    const destination = document.querySelector("#dyr");
+    destination.querySelector("h3").textContent = dyr.navn;
+    destination.querySelector("img").src = dyr.billede;
+    destination.querySelector("p").textContent = dyr.type;
+    destination.querySelector("p:not(:first-of-type)").textContent =
+      dyr.levested;
+  </script>
+</html>

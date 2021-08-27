@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TITLE</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <!-- Helps with crawlers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Helps with responsiveness -->
+    <meta
+      name="description"
+      content="This is the description of the website..."
+    />
+    <!-- Description of the website -->
+    <link rel="icon" href="/html5.ico" />
+    <!-- Favicon -->
+  </head>
+  <body>
+    <article id="gris">
+      <img src="//" alt="" />
+    </article>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", start);
+
+    let dyr = [
+      {
+        navn: "gris",
+        type: "pattedyr",
+        levested: "bondegårde",
+        billede: "http://mabe-kea.dk/E19/pics/pig.png",
+      },
+      {
+        navn: "frø",
+        type: "amfibie",
+        levested: "skove og søer",
+        billede: "http://mabe-kea.dk/E19/pics/frog.png",
+      },
+      {
+        navn: "ræv",
+        type: "pattedyr",
+        levested: "skove",
+        billede: "http://mabe-kea.dk/E19/pics/fox.png",
+      },
+      {
+        navn: "sild",
+        type: "fisk",
+        levested: "søer og have",
+        billede: "http://mabe-kea.dk/E19/pics/sild.jpg",
+      },
+      {
+        navn: "krokodille",
+        type: "krybdyr",
+        levested: "sumpområder",
+        billede: "http://mabe-kea.dk/E19/pics/kroko.jpg",
+      },
+    ];
+
+    function start() {
+      console.log(dyr);
+    }
+  </script>
+</html>

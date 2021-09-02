@@ -72,7 +72,9 @@
       };
       const dest = document.querySelector("#menu-container");
       const theTemplatePointer = document.querySelector("template");
+      const billedUrl = "./img/";
       let filterRet = "alle";
+      
 
       document.addEventListener("DOMContentLoaded", getJson);
 
@@ -102,7 +104,7 @@
             theClone.querySelector("h2").textContent = ret.navn;
             theClone.querySelector(
               "img"
-            ).src = `img/${ret.billede}.jpg`;
+            ).src = billedUrl + ret.billede;
             theClone.querySelector("img").alt = ret.navn;
             theClone.querySelector("p.info").textContent = ret.kortbeskrivelse;
             theClone.querySelector("span").textContent = ret.pris;
@@ -125,7 +127,7 @@
         document.querySelector(".popup h2").textContent = ret.navn;
         document.querySelector(
           ".popup img"
-        ).src = `img/${ret.billede}.jpg`;
+        ).src = billedUrl + ret.billede;
         document.querySelector(".popup img").alt = ret.navn;
         document.querySelector(".popup details p").textContent =
           ret.langbeskrivelse;

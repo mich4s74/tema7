@@ -88,12 +88,17 @@ footer section {
 #menu-container h1 {
   grid-column: 1/4;
 }
+
+#overskrift {
+  padding-bottom: 2rem;
+}
 .overskrifter {
   border-bottom: 2px solid #000;
   margin: 10px 0;
 }
 #menu-container article {
   cursor: pointer;
+  padding: 2rem;
 }
 article:nth-child(even) {
   background: black;

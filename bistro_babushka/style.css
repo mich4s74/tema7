@@ -44,8 +44,9 @@ nav {
 }
 button {
   font-size: 1.6rem;
-  padding: 5px;
-  margin: 5px;
+  cursor: pointer;
+  border: none;
+  padding: 1rem 2rem;
   display: block;
   background: black;
   color: white;

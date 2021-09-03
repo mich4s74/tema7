@@ -19,7 +19,7 @@ img {
   object-fit: cover;
 }
 header {
-  background-color: black;
+  background-color: #356756;
   display: flex;
   align-content: center;
 }
@@ -103,10 +103,10 @@ footer section {
 }
 #menu-container article {
   cursor: pointer;
-  padding: 2rem;
+  padding: 3rem;
 }
 article:nth-child(even) {
-  background: #8b2413;
+  background: #356756;
   color: white;
 }
 article h2,

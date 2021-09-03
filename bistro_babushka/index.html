@@ -10,14 +10,13 @@
   <body>
 
     <div class="popup">
-        <!-- popup vindue der vises når der klikkes på en enkelt ret -->
         <div class="popup-content">
             <button>Gå tilbage</button>
             <h2 class="single-titel" data-titel>test</h2>
             <img src="" alt="" class="single-img" data-singleimg>
             <details close>
-                <summary>Beskrivelse</summary>
-                <p data-beskrivelse>Her står noget tekst</p>
+                <summary>Læs mere om denne ret</summary>
+                <p data-beskrivelse>Tekst her</p>
             </details>
         </div>
     </div>
@@ -65,14 +64,18 @@
 
 </body>
 
+
     <script>
       let retter;
+      const url = "https://babushka-dd8a.restdb.io/rest/menu"
       const myHeaders = {
-        "x-apikey": "600ec2fb1346a1524ff12de4",
+        headers: {"x-apikey": "600ec2fb1346a1524ff12de4",
+        },
       };
       const dest = document.querySelector("#menu-container");
       const theTemplatePointer = document.querySelector("template");
-      const billedUrl = "./img/";
+      const billedUrl = "img/";
+      const md = "-md.jpg";
       let filterRet = "alle";
       
 
@@ -80,16 +83,9 @@
 
 
       async function getJson() {
-        let jsonData = await fetch(
-          "https://babushka-dd8a.restdb.io/rest/menu",
-          {
-            headers: myHeaders,
-          }
-        );
-
-        let tempVar = await jsonData.json();
-        retter = tempVar;
-        console.log("Retter", retter);
+        let jsonData = await fetch(url, myHeaders);
+        retter = await jsonData.json();
+        console.log("Retter", retter)
 
         visRetter();
         addEventListenersToButtons();
@@ -104,7 +100,7 @@
             theClone.querySelector("h2").textContent = ret.navn;
             theClone.querySelector(
               "img"
-            ).src = billedUrl + ret.billede;
+            ).src = billedUrl + ret.billednavn + md;
             theClone.querySelector("img").alt = ret.navn;
             theClone.querySelector("p.info").textContent = ret.kortbeskrivelse;
             theClone.querySelector("span").textContent = ret.pris;
@@ -119,6 +115,7 @@
       }
       function visSingle(ret) {
         console.log("ret", ret);
+        
         document.querySelector(".popup").style.display = "block";
         document
           .querySelector(".popup button")
@@ -127,7 +124,7 @@
         document.querySelector(".popup h2").textContent = ret.navn;
         document.querySelector(
           ".popup img"
-        ).src = billedUrl + ret.billede;
+        ).src = billedUrl + ret.billednavn + md;
         document.querySelector(".popup img").alt = ret.navn;
         document.querySelector(".popup details p").textContent =
           ret.langbeskrivelse;
@@ -145,7 +142,7 @@
 
       function filtrering() {
         filterRet = this.dataset.ret;
-        document.querySelector("h1").textContent = this.textContent;
+        document.querySelector("main h1").textContent = this.textContent;
         visRetter();
       }
 

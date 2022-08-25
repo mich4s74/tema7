@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>TITLE</title>
     <meta charset="UTF-8" />
     <meta name="robots" content="index,follow" />
     <!-- Helps with crawlers -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Helps with responsiveness -->
-    <meta
-      name="description"
-      content="This is the description of the website..."
-    />
+    <meta name="description" content="This is the description of the website..." />
     <!-- Description of the website -->
     <link rel="icon" href="/html5.ico" />
     <!-- Favicon -->
     <style>
-        section{
+        section {
             display: grid;
-            grid-template-columns: repeat( auto-fill, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             gap: 10px;
         }
+
         article {
             border: 1px solid #333;
             padding: 10px;
@@ -28,10 +27,10 @@
         img {
             max-width: 30%;
         }
-
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <section>
 
     </section>
@@ -78,17 +77,18 @@
         }]
 
         let container = document.querySelector("section");
-        let temp = document.querySelector("template");
-        
+        let template = document.querySelector("template");
+
         //løb igennem array "dyr"
         dyr.forEach(etDyr => {
 
-            let klon = temp.cloneNode(true).content;
+            let klon = template.cloneNode(true).content;
             klon.querySelector("h2").textContent = etDyr.navn;
             klon.querySelector(".art").textContent = etDyr.type;
             klon.querySelector(".sted").textContent = etDyr.levested;
             klon.querySelector("img").src = etDyr.billede;
             container.appendChild(klon);
         })
-        </script>
+    </script>
+
 </html>
